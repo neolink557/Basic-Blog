@@ -9,14 +9,25 @@
 <body>
     <header>
         <div class="container header-container">
+    
             <h1 class="logo">Neo's Minimal Blog</h1>
-            <nav>
+
+            <nav id="nav-menu-mobile" class="nav-menu-mobile"> 
+                <button id="toggle-menu" class="menu-toggle">&#9776;</button>
+           </nav>
+            <nav id="nav-menu" class="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                 <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
+    
+    <nav id="sidebar-menu" class="sidebar-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
     <main>
         <div class="container">
             <section class="featured-post expanded">

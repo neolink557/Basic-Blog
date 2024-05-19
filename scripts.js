@@ -93,3 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('toggle-menu');
+    const sidebarMenu = document.getElementById('sidebar-menu');
+
+    menuToggle.addEventListener('click', function() {
+        sidebarMenu.classList.toggle('active');
+    });
+});
+
+

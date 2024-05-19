@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 header {
@@ -321,4 +322,89 @@ footer {
 
 .featured-post.expanded .featured-image {
     height: 400px; /* Expanded height, adjust as needed */
+}
+
+
+/* Media query for screens smaller than 768px (typical mobile screens) */
+@media (max-width: 768px) {
+    .featured-post {
+        flex-direction: column; /* Change layout to stack vertically */
+    }
+
+    .featured-image {
+        width: 100%;
+        height: 200px; /* Adjust as needed */
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .posts {
+        flex-direction: column; /* Change layout to stack posts vertically */
+    }
+
+    .post {
+        flex: 1 1 100%; /* Each post takes full width */
+        margin-bottom: 2rem; /* Add some space between posts */
+    }
+}
+
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+}
+
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Off-screen initially */
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    padding-top: 60px; /* Adjust according to header height */
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-menu a {
+    display: block;
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.sidebar-menu a:hover {
+    background-color: #555;
+}
+
+/* Media query for screens smaller than 768px (typical mobile screens) */
+@media (max-width: 768px) {
+    .header-container {
+        justify-content: flex-start; /* Adjust alignment for smaller screens */
+    }
+    .nav-menu {
+        display: none; /* Hide the navigation links */
+    }
+
+    .menu-toggle {
+        display: flex; /* Display the toggle button for smaller screens */
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        order: 2; /* Move the menu icon to the right */
+    }
+
+    .logo {
+        order: 1; /* Move the title to the left */
+    }
+
+    .sidebar-menu {
+        width: 200px; /* Adjust width for smaller screens */
+    }
+
+    /* Adjust the position of the sidebar menu when toggled */
+    .sidebar-menu.active {
+        left: 0;
+    }
 }
