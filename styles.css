@@ -326,33 +326,8 @@ footer {
 
 
 /* Media query for screens smaller than 768px (typical mobile screens) */
-@media (max-width: 768px) {
-    .featured-post {
-        flex-direction: column; /* Change layout to stack vertically */
-    }
 
-    .featured-image {
-        width: 100%;
-        height: 200px; /* Adjust as needed */
-    }
 
-    .content {
-        padding: 1rem;
-    }
-
-    .posts {
-        flex-direction: column; /* Change layout to stack posts vertically */
-    }
-
-    .post {
-        flex: 1 1 100%; /* Each post takes full width */
-        margin-bottom: 2rem; /* Add some space between posts */
-    }
-}
-
-.menu-toggle {
-    display: none; /* Hide the toggle button by default */
-}
 
 .sidebar-menu {
     position: fixed;
@@ -378,7 +353,44 @@ footer {
 }
 
 /* Media query for screens smaller than 768px (typical mobile screens) */
+@media (min-width: 769px) {
+    .header-container {
+        justify-content: space-between; /* Adjust alignment for smaller screens */
+    }
+    .nav-menu-mobile {
+        display: none; /* Hide the navigation links */
+    }
+
+    .menu-toggle {
+    display: none; /* Hide the toggle button by default */
+}
+}
+
+
+/* Media query for screens smaller than 768px (typical mobile screens) */
 @media (max-width: 768px) {
+    .featured-post {
+        flex-direction: column; /* Change layout to stack vertically */
+    }
+
+    .featured-image {
+        width: 100%;
+        height: 200px; /* Adjust as needed */
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .posts {
+        flex-direction: column; /* Change layout to stack posts vertically */
+    }
+
+    .post {
+        flex: 1 1 100%; /* Each post takes full width */
+        margin-bottom: 2rem; /* Add some space between posts */
+    }
+
     .header-container {
         justify-content: flex-start; /* Adjust alignment for smaller screens */
     }
