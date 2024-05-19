@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimal Blog</title>
+    <title>Neo's Minimal Blog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container header-container">
-            <h1 class="logo">Minimal Blog</h1>
+            <h1 class="logo">Neo's Minimal Blog</h1>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -19,11 +19,11 @@
     </header>
     <main>
         <div class="container">
-            <section class="featured-post">
-                <img src="featured-image.jpg" alt="Featured Post Image">
+            <section class="featured-post expanded">
+                <div class="featured-image" style="background-image: url('featured-image.jpeg');"></div>
                 <div class="content">
                     <h2>Viviendo al Máximo: Claves para Aprovechar la Vida</h2>
-                    <p class="expandable" data-expanded="false">La vida es un regalo precioso, y debemos aprovecharla al máximo. Aquí tienes algunas claves para vivir plenamente:
+                    <p class="expandable" data-expanded="true">La vida es un regalo precioso, y debemos aprovecharla al máximo. Aquí tienes algunas claves para vivir plenamente:
 
                         Encuentra tu pasión
                         Descubre qué te apasiona y dedica tiempo a ello. Ya sea escribir, pintar, viajar o bailar, tu pasión te dará energía y satisfacción.
@@ -44,7 +44,7 @@
             </section>
             <section class="posts">
                 <article class="post">
-                    <img src="post1.jpg" alt="Post Image">
+                    <div class="post-image" style="background-image: url('post1.jpeg');"></div>
                     <h3>Autorrealizarte: Transformando Mi Carrera a los 20</h3>
                     <p class="expandable" data-expanded="false">A veces, necesitamos reinventarnos profesionalmente. Aquí está mi historia:
 
@@ -59,8 +59,8 @@
                     <button class="read-more">Read more</button>
                 </article>
                 <article class="post">
-                    <img src="post2.jpg" alt="Post Image">
-                    <h3>Positive Travel: Descubriendo el Mundo sin Gastar Mucho                    </h3>
+                    <div class="post-image" style="background-image: url('post2.jpeg');"></div>
+                    <h3>Positive Travel: Descubriendo el Mundo sin Gastar Mucho</h3>
                     <p class="expandable" data-expanded="false">Viajar no tiene por qué ser costoso. Aquí tienes algunos consejos:
 
                         Planificación inteligente
@@ -77,7 +77,7 @@
                     <button class="read-more">Read more</button>
                 </article>
                 <article class="post">
-                    <img src="post3.jpg" alt="Post Image">
+                    <div class="post-image" style="background-image: url('post3.jpeg');"></div>
                     <h3>Post Title 3</h3>
                     <p class="expandable" data-expanded="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
                     <button class="read-more">Read more</button>
@@ -87,7 +87,7 @@
     </main>
     <footer>
         <div class="container">
-            <p>&copy; 2024 Minimal Blog</p>
+            <p>&copy; 2024 Neo's Minimal Blog</p>
         </div>
     </footer>
     <script src="scripts.js"></script>

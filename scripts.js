@@ -65,3 +65,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.read-more').forEach(button => {
+        button.addEventListener('click', () => {
+            const post = button.closest('.post');
+            const isExpanded = post.classList.toggle('expanded');
+            if (isExpanded) {
+                button.textContent = 'Read less'; // Update button text
+            } else {
+                button.textContent = 'Read more'; // Update button text
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const readMoreButton = document.querySelector('.featured-post .read-more');
+    const featuredPost = document.querySelector('.featured-post');
+
+    readMoreButton.addEventListener('click', () => {
+        const isExpanded = featuredPost.classList.toggle('expanded');
+        if (isExpanded) {
+            readMoreButton.textContent = 'Read less'; // Update button text
+        } else {
+            readMoreButton.textContent = 'Read more'; // Update button text
+        }
+    });
+});

@@ -272,3 +272,53 @@ footer {
 .read-more:hover {
     text-decoration: none;
 }
+
+.post {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* Ensure content doesn't overflow when expanded */
+}
+
+.post-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px; /* Initial height, adjust as needed */
+    transition: height 0.3s ease; /* Smooth transition when expanding */
+}
+
+.post-content {
+    padding-top: 1rem; /* Adjust spacing between image and content */
+}
+
+.post.expanded .post-image {
+    height: 400px; /* Expanded height, adjust as needed */
+}
+
+.featured-post {
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure content doesn't overflow when expanded */
+}
+
+.featured-image {
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    height: 200px; /* Initial height, adjust as needed */
+    transition: height 0.3s ease; /* Smooth transition when expanding */
+}
+
+.content {
+    padding: 1rem;
+    flex: 1;
+}
+
+.featured-post.expanded .featured-image {
+    height: 400px; /* Expanded height, adjust as needed */
+}
