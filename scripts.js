@@ -43,3 +43,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.read-more').forEach(button => {
+        button.addEventListener('click', () => {
+            const p = button.previousElementSibling;
+            const isExpanded = p.getAttribute('data-expanded') === 'true';
+
+            if (isExpanded) {
+                // If paragraph is expanded, collapse it
+                p.setAttribute('data-expanded', 'false');
+            } else {
+                // If paragraph is collapsed, expand it
+                p.setAttribute('data-expanded', 'true');
+                const siblings = document.querySelectorAll('.post > .content > .expandable');
+                siblings.forEach(sibling => {
+                    if (sibling !== p) {
+                        sibling.setAttribute('data-expanded', 'true');
+                    }
+                });
+            }
+        });
+    });
+});

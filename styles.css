@@ -227,5 +227,48 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
+    margin-top: auto;
+}
+
+/* New styles for expandable text */
+.expandable {
+    max-height: 3rem; /* Adjust according to the number of lines you want to show */
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.expandable {
+    max-height: 3.6rem; /* Set to two lines of text plus a bit extra */
+    overflow: hidden;
+    position: relative;
+    line-height: 1.8; /* Adjust line-height to match the height of two lines */
+}
+
+.expandable[data-expanded="true"] {
+    max-height: 1000px; /* Ensure this is sufficiently large to fit the expanded content */
+}
+
+.expandable::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 4rem; /* Width of the ellipsis area */
+    height: 1.8rem; /* Height of two lines */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 80%); /* Gradient effect */
+}
+
+
+.read-more {
+    margin-top: 1rem;
+    color: #007BFF;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.read-more:hover {
+    text-decoration: none;
 }
