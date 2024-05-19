@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Minimal Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Contact Us</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="contact-form">
+                <h2>Get in Touch</h2>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required class="rounded-input">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required class="rounded-input">
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required class="rounded-input"></textarea>
+                    
+                    <button type="submit" class="submit-button">Send</button>
+                </form>
+                <p id="formMessage"></p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Minimal Blog</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
